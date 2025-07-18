@@ -1,0 +1,74 @@
+@import '_variables';
+
+.filters-container {
+  width: 100%;
+  border-radius: $border-radius-md;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.dynamic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: $font-size-sm;
+}
+
+.dynamic-table thead th {
+  background-color: $color-primary;
+  color: white; // No variable defined for white
+}
+
+.dynamic-table thead th:first-child {
+  border-top-left-radius: $border-radius-md;
+}
+
+.dynamic-table thead th:last-child {
+  border-top-right-radius: $border-radius-md;
+}
+
+.dynamic-table th,
+.dynamic-table td {
+  padding: 12px $font-size-base; // 16px = base font size
+  text-align: left;
+  border-bottom: 1px solid $color-border-light;
+}
+
+.dynamic-table th {
+  background-color: $color-background-light;
+  font-weight: 500;
+  color: $color-text-medium;
+}
+
+.metric-header,
+.row-label {
+  text-align: left;
+  font-weight: 500;
+  color: $color-text-dark;
+}
+
+.dynamic-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.dynamic-table tbody tr:hover {
+  background-color: rgba($color-primary, 0.05); // using rgba() with SCSS color
+}
+
+@media (max-width: 768px) {
+  .dynamic-table th,
+  .dynamic-table td {
+    padding: 8px 12px;
+    font-size: $font-size-sm; // no variable available for 13px
+  }
+}
+
+@media (max-width: 576px) {
+  .dynamic-table th,
+  .dynamic-table td {
+    padding: 6px 8px;
+    font-size: 12px; // no variable available for 12px
+  }
+}

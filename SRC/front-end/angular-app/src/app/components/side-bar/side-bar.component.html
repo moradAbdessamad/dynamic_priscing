@@ -1,0 +1,15 @@
+<div class="side-bar-container">
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Logo" routerLink="/" routerLinkActive="">
+    </div>
+
+    <div class="side-bar-urls-container">
+        <div class="side-bar-url" *ngFor="let item of navItems">
+            <a [routerLink]="'/' + item.label.toLowerCase()" 
+               routerLinkActive="active"
+               [class.active]="item.active">
+                <span class="material-icons">{{ item.icon }}</span>
+            </a>
+        </div>
+    </div>
+</div>

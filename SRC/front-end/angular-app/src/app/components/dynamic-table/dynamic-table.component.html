@@ -1,0 +1,24 @@
+<div class="filters-container">
+  <div class="filters-content">
+    <div class="table-responsive">
+      <table class="dynamic-table">
+        <thead>
+          <tr>
+            <th class="metric-header">Metric</th>
+            <th *ngFor="let date of dates" class="head-table">
+              {{ formatDate(date) }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of rows">
+            <td class="row-label">{{ row.label }}</td>
+            <td *ngFor="let value of row.values">
+              {{ formatNumber(value) }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

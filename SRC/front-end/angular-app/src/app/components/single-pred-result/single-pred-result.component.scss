@@ -1,0 +1,111 @@
+@import '../../styles/variables.scss';
+
+.report-content {
+  margin-top: 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  width: 80%;
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--neutral-100);
+  border-radius: 6px;
+}
+
+.prediction-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.prediction-table th,
+.prediction-table td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--neutral-100);
+}
+
+.prediction-table th {
+  background-color: var(--neutral-50);
+  font-weight: 500;
+  color: var(--neutral-900);
+}
+
+.metric-column {
+  background-color: var(--neutral-50);
+  font-weight: 500;
+  min-width: 120px;
+}
+
+.prediction-table td {
+  color: var(--neutral-700);
+}
+
+.prediction-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.prediction-table tbody tr:hover {
+  background-color: var(--neutral-50);
+}
+
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 24px;
+  color: var(--neutral-600);
+}
+
+
+
+@media (max-width: 768px) {
+  .report-content {
+    padding: 16px;
+    margin-top: 16px;
+  }
+  
+  .prediction-table th,
+  .prediction-table td {
+    padding: 12px;
+  }
+}
+
+// my custom styling
+
+.pred-result-container {
+  background-color: white;
+  border-radius: $border-radius-md;
+  box-shadow: $box-shadow-light;
+  overflow: hidden;
+  margin-bottom: 16px;
+  margin-top: 5px;
+  // border: 1px solid blue;
+  width: 100%;
+}
+
+.pred-result-header {
+  // border: 1px solid red;
+  padding: 16px 24px;
+  background-color: $color-background-light;
+  border-bottom: 1px solid $color-border-medium;
+}
+
+.pred-result-header h2 {
+  margin: 0;
+  font-size: $font-size-lg;
+  font-weight: 500;
+  color: $color-text-dark;
+}
+
+.pred-result-content {
+  // border: 1px solid red;
+  margin-top: 20px; 
+  padding: 16px 24px;
+}
+
+.error-message {
+  color: var(--error);
+}

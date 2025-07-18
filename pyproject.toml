@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PFEVersion2_project"
+version = "0.1.0"
+description = "Description of your project."
+requires-python = ">=3.8"
+# Add other dependencies here if your project needs them:
+# dependencies = [
+#     "numpy",
+#     "pandas",
+# ]
+
+[tool.setuptools.packages.find]
+where = ["."]  # Look for packages in the current directory (PFEVersion2)
+include = ["SRC*"]  # This will find the SRC package and its subpackages

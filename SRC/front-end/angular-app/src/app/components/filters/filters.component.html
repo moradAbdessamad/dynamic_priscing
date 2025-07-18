@@ -1,0 +1,96 @@
+<div class="filters-container">
+  <div class="filters-header">
+    <h2>Filters:</h2>
+    <button 
+      type="button" 
+      class="btn btn-text"
+      (click)="toggleFilters()">
+      {{ filtersVisible ? 'Hide Filters' : 'Show Filters' }}
+    </button>
+  </div>
+
+  <div [@expandCollapse]="filtersVisible ? 'expanded' : 'collapsed'" class="filters-content">
+    <form [formGroup]="filterForm" (ngSubmit)="generateReport()">
+      <div class="form-grid">
+        
+        <div class="form-group">
+          <label for="fromDate">From:</label>
+          <input 
+            type="date" 
+            id="fromDate" 
+            formControlName="fromDate"
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="toDate">To:</label>
+          <input 
+            type="date" 
+            id="toDate" 
+            formControlName="toDate"
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="unit">Units:</label>
+          <select 
+            id="unit" 
+            formControlName="unit"
+            class="form-control">
+            <option *ngFor="let option of unitsOptions" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="models">Models:</label>
+          <select
+            id="models"
+            formControlName="models"
+            class="form-control">
+            <option *ngFor="let option of modelsOptions" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="targetPredict">Target Predict:</label>
+          <select
+            id="targetPredict"
+            formControlName="targetPredict"
+            class="form-control">
+            <option *ngFor="let option of targetPredictOptions" [value]="option.value">
+              {{ option.label }}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="targetValueMin">Target Value Min:</label>
+          <input
+            type="number"
+            id="targetValueMin"
+            formControlName="targetValueMin"
+            class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="targetValue">Target Value Max:</label>
+          <input
+            type="number"
+            id="targetValueMax"
+            formControlName="targetValueMax"
+            class="form-control">
+        </div>
+
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Generate Report</button>
+        <button type="button" class="btn btn-secondary" (click)="resetFilters()">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>

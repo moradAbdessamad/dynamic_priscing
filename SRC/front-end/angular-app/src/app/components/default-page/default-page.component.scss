@@ -1,0 +1,16 @@
+@import '_variables';
+
+.default-page-container {
+    background-color: white; 
+    box-shadow: $box-shadow-light;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    width: 100%;
+    height: 10vh;
+    padding: $font-size-base 24px; 
+}
+
+.default-page-container p {
+    font-size: $font-size-base;
+    text-transform: capitalize;
+}

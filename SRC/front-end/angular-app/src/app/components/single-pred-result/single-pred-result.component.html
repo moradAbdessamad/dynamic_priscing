@@ -1,0 +1,19 @@
+<div class="pred-result-container" *ngIf="isLoading || error || hasData">
+  <div class="pred-result-header">
+    <h2>Single Date Prediction Result</h2>
+  </div>
+
+  <div class="pred-result-content">
+    <div *ngIf="isLoading" class="loading-indicator">
+      Loading prediction results...
+    </div>
+    
+    <div *ngIf="error" class="error-message">
+      Error: {{ error.message || 'Something went wrong fetching prediction data' }}
+    </div>
+    
+    <div *ngIf="!isLoading && !error && hasData">
+      <app-dynamic-table [data]="tableData"></app-dynamic-table>
+    </div>
+  </div>
+</div>
