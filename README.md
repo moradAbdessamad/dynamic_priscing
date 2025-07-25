@@ -46,7 +46,7 @@ This project implements an intelligent dynamic pricing system for hotels, specif
    - Historical and forecast data
    - Impact on demand patterns
 
-3. **Events Data (PredictHQ API)**
+3. **Events Data (PredictHQ API or scrappe agent)**
    - Local events and their impact on demand
    - Event categorization and severity
 
@@ -154,7 +154,7 @@ result = response.json()
 ## 📁 Project Structure
 
 ```
-PFEVersion2/
+PFEProject/
 ├── SRC/                          # Source code
 │   ├── back-end/                 # Flask API server
 │   │   ├── app/                  # Application modules
@@ -274,7 +274,7 @@ python -m pytest tests/
 
 ## 📄 License
 
-This project is part of a Master's thesis (PFE - Projet de Fin d'Études) for dynamic pricing in hotel revenue management.
+This project is part of a Master's thesis (PFE - Projet de Fin d'Études) for dynamic pricing in hotel revenue management system.
 
 ## 👥 Authors
 
